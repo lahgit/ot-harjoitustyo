@@ -2,7 +2,7 @@ import unittest
 from maksukortti import Maksukortti
 
 class TestMaksukortti(unittest.TestCase):
-    
+
     def setUp(self):
         self.kortti = Maksukortti(1000)
 
@@ -25,6 +25,29 @@ class TestMaksukortti(unittest.TestCase):
         kortti.syo_edullisesti()
 
         self.assertEqual(kortti.saldo_euroina(), 2.0)
+
+    def test_kortille_voi_ladata_rahaa(self):
+        self.kortti.lataa_rahaa(2500)
+
+        self.assertEqual(self.kortti.saldo_euroina(), 35.0)
+
+    def test_kortin_saldo_ei_ylita_maksimiarvoa(self):
+        self.kortti.lataa_rahaa(20000)
+
+        self.assertEqual(self.kortti.saldo_euroina(), 150.0)
+    
+    def test_syo_maukkaasti_ei_vie_saldoa_negatiiviseksi(self):
+        kortti = Maksukortti(200)
+        kortti.syo_edullisesti()
+
+        self.assertEqual(kortti.saldo_euroina(), 2.0)
+
+    def test_negatiivinen_lataus_ei_lataa(self):
+        kortti = Maksukortti(200)
+        kortti2 = Maksukortti(200)
+        kortti.lataa_rahaa(-1)
+        self.assertEqual(kortti.saldo_euroina(), kortti2.saldo_euroina())
+
 
 
 
