@@ -5,5 +5,11 @@
 * Suoritetut pelit ja niiden tuloksia voidaan säilyttää tietokannassa
 * Pelillä voi olla ajastin
 
+
+laskarit
 https://github.com/lahgit/ot-harjoitustyo/tree/master/laskarit
 
+
+
+kirjanpito
+https://github.com/lahgit/ot-harjoitustyo/blob/master/dokumentaatio/tuntikirjanpito.md
