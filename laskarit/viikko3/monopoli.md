@@ -19,5 +19,8 @@
     Omistukset -- Pelaaja
     laitokset -- Omistukset
     Asemat -- Omistukset
-    kadut -- Omistukset   
+    kadut -- Omistukset
+    Rahat -- Pelaaja
+    Kortit -- Yhteismaa
+    Kortit -- Sattuma   
 ```
