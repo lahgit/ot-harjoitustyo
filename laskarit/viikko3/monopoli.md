@@ -9,8 +9,8 @@
     Ruutu "1" -- "0..8" Pelinappula
     Pelinappula "1" -- "1" Pelaaja
     Pelaaja "2..8" -- "1" Monopolipeli
-    Aloitusruutu -- Ruutu
-    Vankila -- Ruutu
+    Aloitusruutu "1" -- Ruutu
+    Vankila "10+30" -- Ruutu
     Sattuma -- Ruutu
     Yhteismaa -- Ruutu
     laitokset -- Ruutu
