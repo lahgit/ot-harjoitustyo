@@ -10,4 +10,8 @@
     Pelinappula "1" -- "1" Pelaaja
     Pelaaja "2..8" -- "1" Monopolipeli
     Aloitusruutu -- Ruutu
+    Vankila -- Ruutu
+    Sattuma ja yhteismaa -- Ruutu
+    Asemat ja laitokset -- Ruutu
+    normaalit kadut -- Ruutu   
 ```
