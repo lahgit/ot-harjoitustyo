@@ -2,8 +2,8 @@
 
 ```mermaid
  sequenceDiagram
-    Main->>John: Hello John, how are you?
-    John-->>Main: Great!
-    Main-)John: See you later!   
+    Main->>laitehallinto: lisaa_lataaja(rautatientori)
+    Main->>laitehallinto: lisaa_lukija(ratikka6)
+    Main->>laitehallinto: lisaa_lukija(bussi244)   
 ```
 
