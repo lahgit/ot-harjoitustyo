@@ -15,5 +15,9 @@
     Yhteismaa -- Ruutu
     laitokset -- Ruutu
     Asemat -- Ruutu
-    kadut -- Ruutu   
+    kadut -- Ruutu
+    Omistukset -- Pelaaja
+    laitokset -- Omistukset
+    Asemat -- Omistukset
+    kadut -- Omistukset   
 ```
