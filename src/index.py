@@ -1,15 +1,6 @@
 import pygame
 
 
-class Clock:
-    def __init__(self):
-        self._clock = pygame.time.Clock()
-
-    def tick(self, fps):
-        self._clock.tick(fps)
-
-    def get_ticks(self):
-        return pygame.time.get_ticks()
 
 
 Level1 =   [[1, 1, 1, 1, 1, 0, 0, 0],
@@ -54,7 +45,7 @@ def main():
     pygame.display.set_caption("Minesweeper")
 
     pygame.init()
-    clock = Clock()
+    clock = pygame.time.Clock()
 
 
     KeepGameRunning = True
