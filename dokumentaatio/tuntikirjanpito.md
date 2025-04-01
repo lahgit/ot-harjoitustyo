@@ -5,4 +5,4 @@
 
 
 -1.4.2025
--7 tuntia harjoitustyön tekemiseen
+-7 tuntia harjoitustyön tekemiseen ja projektin aloittamiseen
