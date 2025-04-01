@@ -11,7 +11,7 @@
     Pelaaja "2..8" -- "1" Monopolipeli
     Aloitusruutu -- Ruutu
     Vankila -- Ruutu
-    Sattuma ja yhteismaa -- Ruutu
-    Asemat ja laitokset -- Ruutu
-    normaalit kadut -- Ruutu   
+    Sattuma/yhteismaa -- Ruutu
+    Asemat/laitokset -- Ruutu
+    kadut -- Ruutu   
 ```
