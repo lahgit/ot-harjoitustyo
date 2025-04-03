@@ -10,8 +10,8 @@ def main():
     height = len(level_map)
     width = len(level_map[0])
     topbar = 60
-    display_height = height * 55.5 + topbar
-    display_width = width * 55.5
+    display_height = height * 55 + topbar +5
+    display_width = width * 55 + 5
     display = pygame.display.set_mode((display_width, display_height))
 
     pygame.display.set_caption("Minesweeper")
