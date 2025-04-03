@@ -8,8 +8,6 @@ class Level:
         self.level_map = level_map
         self.tileSize = 50
         self.GenerationSuccess = False
-        self.horizontalTotalGap = 0
-        self.verticalTotalGap = 0
         
 
     def draw_grid(self): #Osittain generoitua koodia ChatGPT:llä
@@ -30,6 +28,5 @@ class Level:
                 pygame.draw.rect(self.display, color, (x, y, self.tileSize, self.tileSize))
                 pygame.draw.rect(self.display, (0, 0, 0), (x, y, self.tileSize, self.tileSize), 2) #Ja tähän loppuu ChatGPT:een koodi
 
-        self.horizontalTotalGap = gapx
-        self.verticalTotalGap = gapy
+    
         self.GenerationSuccess = True
