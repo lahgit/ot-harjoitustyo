@@ -9,7 +9,8 @@ def main():
     level_map = getlevel.selected_level
     height = len(level_map)
     width = len(level_map[0])
-    display_height = height * 50 + 100
+    topbar = 60
+    display_height = height * 50 + 45 + topbar
     display_width = width * 50 + 45
     display = pygame.display.set_mode((display_width, display_height))
 
@@ -28,7 +29,7 @@ def main():
                 KeepGameRunning = False  
 
         display.fill((120, 120, 120)) 
-        display.fill((180, 180, 180), rect = (0, 0, 500, 60))
+        display.fill((180, 180, 180), rect = (0, 0, display_width, 60))
 
         level.draw_grid()
 
