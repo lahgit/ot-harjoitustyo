@@ -34,8 +34,12 @@ def main():
         if event.type == pygame.MOUSEBUTTONDOWN and not mouse_held: # osittain generoitua ChatGPTeellä
             x, y = event.pos
 
-            levelgrid_x = x //  50
-            levelgrid_y = (y-topbar) //  50
+            levelgrid_x = x /  50
+            levelgrid_y = (y-topbar) /  50
+
+            levelgrid_x = int(levelgrid_x)
+            levelgrid_y = int(levelgrid_y)
+
 
             if 0 <= levelgrid_x < width and 0 <= levelgrid_y < height:
                 level_map[levelgrid_y][levelgrid_x] = 1 if level_map[levelgrid_y][levelgrid_x] == 0 else 0
