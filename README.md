@@ -1,6 +1,6 @@
 # Ohjelmistotekniikka, harjoitustyö
 
-##Ohjelma käynnistyy nyt vain suorittamalla poetry run invoke start komennolla src/ kansiosta koska en osaa korjata
+#Ohjelma käynnistyy nyt vain suorittamalla poetry run invoke start komennolla src/ kansiosta koska en osaa korjata
 
 ## Miinaharava
 * aluksi vaikka joku 10*10 kenttä mihin tulee satunnaisesti miinoja joita pelaaja yrittää selvittää ilman että osuu miinaan
