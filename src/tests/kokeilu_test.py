@@ -2,17 +2,14 @@ import unittest
 import pygame
 from level import Level
 
-Level1 =   [[1, 1, 1, 0, 0, 0, 0, 0],
-            [1, 0, 1, 0, 0, 0, 0, 0],
-            [1, 0, 0, 0, 1, 0, 0, 0],
-            [1, 0, 1, 0, 0, 0, 1, 0],
-            [1, 0, 0, 0, 0, 0, 0, 0],
-            [1, 0, 0, 0, 1, 0, 0, 0],
-            [1, 0, 0, 0, 0, 0, 1, 0],
-            [1, 1, 1, 1, 1, 0, 0, 0]]
-
-
-
+Level1 = [[1, 1, 1, 0, 0, 0, 0, 0],
+          [1, 0, 1, 0, 0, 0, 0, 0],
+          [1, 0, 0, 0, 1, 0, 0, 0],
+          [1, 0, 1, 0, 0, 0, 1, 0],
+          [1, 0, 0, 0, 0, 0, 0, 0],
+          [1, 0, 0, 0, 1, 0, 0, 0],
+          [1, 0, 0, 0, 0, 0, 1, 0],
+          [1, 1, 1, 1, 1, 0, 0, 0]]
 
 
 class TestLevel(unittest.TestCase):
@@ -24,6 +21,5 @@ class TestLevel(unittest.TestCase):
 
         testlevel = Level(testdisplay, Level1)
         testlevel.draw_grid()
-        
-        self.assertEqual(testlevel.GenerationSuccess, True)
 
+        self.assertEqual(testlevel.GenerationSuccess, True)
