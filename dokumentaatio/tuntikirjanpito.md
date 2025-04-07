@@ -13,3 +13,7 @@
 -3.4.2025
 
 -5 tuntia harjoitustyöntekoon. Tasojen valinta on aika sujuvaa ja nyt voi jo merkata alueita
+
+-7.4.2025
+
+-4 tuntia eri ongelmien ratkaisimeksi ja uusi testi
