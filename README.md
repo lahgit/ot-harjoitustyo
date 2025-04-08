@@ -15,3 +15,8 @@ https://github.com/lahgit/ot-harjoitustyo/blob/master/dokumentaatio/tuntikirjanp
 
 changelog
 https://github.com/lahgit/ot-harjoitustyo/blob/master/dokumentaatio/changelog.md
+
+
+
+arkkitehtuuri
+https://github.com/lahgit/ot-harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.md
