@@ -28,7 +28,7 @@ def main():
             if event.type == pygame.QUIT:
                 KeepGameRunning = False
 
-        if event.type == pygame.MOUSEBUTTONDOWN and not mouse_held:  # osittain generoitua ChatGPTeellä
+        if event.type == pygame.MOUSEBUTTONDOWN and not mouse_held:  # generoitu koodi alkaa
             x, y = event.pos
 
             levelgrid_x = x // 50
@@ -40,7 +40,7 @@ def main():
             mouse_held = True
 
         if event.type == pygame.MOUSEBUTTONUP:
-            mouse_held = False  # loppuu tähän
+            mouse_held = False  # generoitu koodi päättyy
 
         display.fill((120, 120, 120))
         display.fill((180, 180, 180), rect=(0, 0, display_width, 60))
