@@ -17,3 +17,10 @@
 -7.4.2025
 
 -4 tuntia eri ongelmien ratkaisimeksi ja uusi testi
+
+-8.4.2025
+
+-1 tunti viikon viimeistelyyn
+
+summa nyt : 15 tuntia
+
