@@ -28,7 +28,7 @@ def main():
             if event.type == pygame.QUIT:
                 KeepGameRunning = False
 
-        if event.type == pygame.MOUSEBUTTONDOWN and not mouse_held:  # generoitu koodi alkaa
+        if event.type == pygame.MOUSEBUTTONDOWN and event.button == 3 and not mouse_held:  # generoitu koodi alkaa
             x, y = event.pos
 
             levelgrid_x = x // 50
