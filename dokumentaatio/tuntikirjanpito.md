@@ -24,3 +24,8 @@
 
 summa nyt : 15 tuntia
 
+#viikko5
+
+-3 tuntia UI:n tekoon
+
+summa nyt : 18 tuntia

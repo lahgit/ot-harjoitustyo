@@ -11,3 +11,8 @@
 
 - Ruudukot skaalautuvat nyt hyvin
 - Vihdoinkin toiminnallisuutena voi lisätä ja poistaa lippuja klikkaamalla
+
+
+## viikko 5
+
+-UI
