@@ -21,6 +21,95 @@ Level3 = [[1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1],
           [1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0]]
 
 
+selected_level_value_global = 0
+
+
+from tkinter import Tk, ttk, StringVar
+
+class UI:
+    def __init__(self, root):
+        self._root = root
+        self._entry = None
+        self._label_var = StringVar()
+        self._label_var.set("0")
+        root.geometry("400x200")
+
+    def start(self):
+        self._entry = ttk.Entry(master=self._root)
+
+
+        button1 = ttk.Button(
+          master=self._root,
+          text="Level 1",
+          command=self._choose1
+        )
+
+        button2 = ttk.Button(
+          master=self._root,
+          text="Level 2",
+          command=self._choose2
+        )
+
+        button3 = ttk.Button(
+          master=self._root,
+          text="Level 3",
+          command=self._choose3
+        )
+
+        heading_label = ttk.Label(master=self._root, text="Select a level by pressing one of the buttons")
+
+        heading_label.grid(row=0, column=0, columnspan=2, padx=10, pady=10, sticky="ew")
+
+        button1.grid(row=1, column=0, padx=10, pady=10, sticky="ew")
+        button2.grid(row=2, column=0, padx=10, pady=10, sticky="ew")
+        button3.grid(row=3, column=0, padx=10, pady=10, sticky="ew")
+
+    def _choose3(self):
+        global selected_level_value_global
+        value = self._label_var.get()
+        increased_value = str(3)
+        selected_level_value_global = 3
+
+        self._label_var.set(increased_value)
+        print(self._label_var.get())
+        self._root.destroy()
+
+    
+    def _choose2(self):
+        global selected_level_value_global
+        value = self._label_var.get()
+        increased_value = str(2)
+        selected_level_value_global = 2
+
+        self._label_var.set(increased_value)
+        print(self._label_var.get())
+        self._root.destroy()
+ 
+
+    def _choose1(self):
+        global selected_level_value_global
+        value = self._label_var.get()
+        increased_value = str(1)
+        selected_level_value_global = 1
+
+        self._label_var.set(increased_value)
+        print(self._label_var.get())
+        self._root.destroy()
+
+
+
+window = Tk()
+window.title("Level select")
+
+ui = UI(window)
+ui.start()
+
+window.mainloop()
+
+print(selected_level_value_global)
+
+
+
 Levellist = {"Level 1": Level1, "Level 2": Level2, "Level 3": Level3}
 
 
@@ -29,24 +118,25 @@ class SelectorForLevels:
     def __init__(self):
 
         self.selected_level = self.select()
+        
 
     def select(self):
-        print("Available levels: \n")
-        for stage in Levellist:
-            print(stage)
-            print("\n")
+        #print("Available levels: \n")
+        #for stage in Levellist:
+        #    print(stage)
+        #    print("\n")
         while True:
 
-            value = str(input("Select the level: "))
-            if value == "1":
+            #value = selected_level_value_global #str(input("Select the level: "))
+            if str(selected_level_value_global) == "1":
 
                 return Level1
 
-            if value == "2":
+            if str(selected_level_value_global) == "2":
 
                 return Level2
 
-            if value == "3":
+            if str(selected_level_value_global) == "3":
 
                 return Level3
 
