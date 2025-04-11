@@ -28,14 +28,51 @@ def main():
             if event.type == pygame.QUIT:
                 KeepGameRunning = False
 
-        if event.type == pygame.MOUSEBUTTONDOWN and event.button == 3 and not mouse_held:  # generoitu koodi alkaa
+        if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1 and not mouse_held:  # generoitu koodi alkaa
             x, y = event.pos
 
             levelgrid_x = x // 50
             levelgrid_y = (y-topbar) // 50
 
-            if 0 <= levelgrid_x < width and 0 <= levelgrid_y < height:
-                level_map[levelgrid_y][levelgrid_x] = 1 if level_map[levelgrid_y][levelgrid_x] == 0 else 0
+
+
+            if 0 <= levelgrid_x < width and 0 <= levelgrid_y < height: # empty tile
+                if level_map[levelgrid_y][levelgrid_x] == 99:
+                    level_map[levelgrid_y][levelgrid_x] = 9
+
+
+            if 0 <= levelgrid_x < width and 0 <= levelgrid_y < height: # tile 1
+                if level_map[levelgrid_y][levelgrid_x] == 11:
+                    level_map[levelgrid_y][levelgrid_x] = 1
+
+            if 0 <= levelgrid_x < width and 0 <= levelgrid_y < height: # tile 2
+                if level_map[levelgrid_y][levelgrid_x] == 22:
+                    level_map[levelgrid_y][levelgrid_x] = 2
+
+            if 0 <= levelgrid_x < width and 0 <= levelgrid_y < height: # tile 3
+                if level_map[levelgrid_y][levelgrid_x] == 33:
+                    level_map[levelgrid_y][levelgrid_x] = 3
+
+            
+            if 0 <= levelgrid_x < width and 0 <= levelgrid_y < height: # tile 4
+                if level_map[levelgrid_y][levelgrid_x] == 44:
+                    level_map[levelgrid_y][levelgrid_x] = 4
+
+            if 0 <= levelgrid_x < width and 0 <= levelgrid_y < height: # tile 5
+                if level_map[levelgrid_y][levelgrid_x] == 55:
+                    level_map[levelgrid_y][levelgrid_x] = 5
+
+            if 0 <= levelgrid_x < width and 0 <= levelgrid_y < height: # tile 6
+                if level_map[levelgrid_y][levelgrid_x] == 66:
+                    level_map[levelgrid_y][levelgrid_x] = 6
+
+            if 0 <= levelgrid_x < width and 0 <= levelgrid_y < height: # tile 7
+                if level_map[levelgrid_y][levelgrid_x] == 77:
+                    level_map[levelgrid_y][levelgrid_x] = 7
+
+            if 0 <= levelgrid_x < width and 0 <= levelgrid_y < height: # tile 8
+                if level_map[levelgrid_y][levelgrid_x] == 88:
+                    level_map[levelgrid_y][levelgrid_x] = 8
 
             mouse_held = True
 
