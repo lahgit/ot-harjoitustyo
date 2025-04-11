@@ -16,3 +16,4 @@
 ## viikko 5
 
 -UI
+-voi klikata ruutuja ja niistä voi saada numeroita tai tyhjiä ruutuja

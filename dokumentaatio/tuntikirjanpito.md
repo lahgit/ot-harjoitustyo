@@ -26,6 +26,12 @@ summa nyt : 15 tuntia
 
 #viikko5
 
+-10.4.2025
+
 -3 tuntia UI:n tekoon
 
-summa nyt : 18 tuntia
+-11.4.2025
+
+-3 tuntia toiminnallisuuden tekoon
+
+summa nyt : 21 tuntia
