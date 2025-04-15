@@ -1,10 +1,10 @@
 # Ohjelmistotekniikka, harjoitustyö
 
 ## Miinaharava
-* aluksi vaikka joku 10*10 kenttä mihin tulee satunnaisesti miinoja joita pelaaja yrittää selvittää ilman että osuu miinaan
 * Ideana toimia samalla tavalla kuin perinteinen minesweeper
-* Suoritetut pelit ja niiden tuloksia voidaan säilyttää tietokannassa
-* Pelillä voi olla ajastin
+* Suoritetut pelit ja niiden tuloksia voidaan säilyttää tietokannassa/tiedostossa
+* Pelillä voi ehkä olla ajastin
+* Pelillä on kolme tasoa, mutta ohjelman koodi pystyy toimimaan eri kokoisilla tasoilla halutessaan.
 
 
 
