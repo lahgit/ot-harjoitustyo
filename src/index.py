@@ -29,7 +29,7 @@ def main():
                 KeepGameRunning = False
 
         if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1 and not mouse_held:  # generoitu koodi alkaa
-            x, y = event.pos
+            x, y = event.pos ## koodia kuitenkin paljon muokattu
 
             levelgrid_x = x // 50
             levelgrid_y = (y-topbar) // 50
@@ -73,6 +73,22 @@ def main():
             if 0 <= levelgrid_x < width and 0 <= levelgrid_y < height: # tile 8
                 if level_map[levelgrid_y][levelgrid_x] == 88:
                     level_map[levelgrid_y][levelgrid_x] = 8
+
+            mouse_held = True
+
+        
+        if event.type == pygame.MOUSEBUTTONDOWN and event.button == 3 and not mouse_held:
+            x, y = event.pos
+            levelgrid_x = x // 50
+            levelgrid_y = (y - topbar) // 50
+
+            if 0 <= levelgrid_x < width and 0 <= levelgrid_y < height:
+                current_value = level_map[levelgrid_y][levelgrid_x]
+                
+                if current_value == 10:
+                    level_map[levelgrid_y][levelgrid_x] = 100
+                elif current_value == 100:
+                    level_map[levelgrid_y][levelgrid_x] = 10
 
             mouse_held = True
 

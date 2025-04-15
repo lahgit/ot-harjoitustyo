@@ -66,7 +66,7 @@ class Level:
             self.flag_texture, (self.tileSize, self.tileSize))
         
         self.unseentiles = [10, 11, 22, 33, 44, 55, 66, 77, 88, 99]
-        self.flagged = [000, 100, 111, 222, 333, 444, 555, 665, 777, 888]
+        self.flagged = [100, 111, 222, 333, 444, 555, 665, 777, 888, 999]
 
     def draw_grid(self):  # Osittain generoitua koodia ChatGPT:llä
 
@@ -109,6 +109,10 @@ class Level:
 
                 if self.level_map[row][col] in self.unseentiles:#== 0:
                     self.display.blit(self.tile_texture, (x, y))
+
+                if self.level_map[row][col] in self.flagged:#== 0:
+                    self.display.blit(self.flag_texture, (x, y))
+                
                 # Ja tähän loppuu ChatGPT:een koodi
 
         self.GenerationSuccess = True
