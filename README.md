@@ -20,3 +20,12 @@ https://github.com/lahgit/ot-harjoitustyo/blob/master/dokumentaatio/changelog.md
 
 arkkitehtuuri
 https://github.com/lahgit/ot-harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.md
+
+
+## Asennus
+
+*git clone git@github.com:lahgit/ot-harjoitustyo.git
+*poetry install
+*poetry run invoke build
+*poetry run invoke start
+
