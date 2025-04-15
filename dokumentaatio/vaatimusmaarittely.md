@@ -7,4 +7,6 @@ kyseessä on peli jossa pelaajan täytyy etsiä ruudukolta miinoja. Ideana olisi
 Todennäköisesti ei tule erikseen olemaan käyttäjiä, mutta voi olla tietokanta missä pidetään yllä joitain tietoja (esim voitetut pelit)
 
 ##Toiminnallisuus
-Tällä hetkellä voi valita tason ja klikkaamalla ruudutuja voi laittaa lippuja
+Tällä hetkellä voi valita tason ja klikkaamalla ruudutuja voi saada esille numeroja, mutta ei miinoja.
+
+yksinkertainen käyttöliittymä tasojen valintaan tehty.
