@@ -1,37 +1,41 @@
 # Tuntikirjanpito
 
 
-##viikko3
+## viikko3
 
 
--1.4.2025
+- 1.4.2025
 
--7 tuntia harjoitustyön tekemiseen ja projektin aloittamiseen
+- 7 tuntia harjoitustyön tekemiseen ja projektin aloittamiseen
 
-##viikko4
+## viikko4
 
--3.4.2025
+- 3.4.2025
 
--5 tuntia harjoitustyöntekoon. Tasojen valinta on aika sujuvaa ja nyt voi jo merkata alueita
+- 5 tuntia harjoitustyöntekoon. Tasojen valinta on aika sujuvaa ja nyt voi jo merkata alueita
 
--7.4.2025
+- 7.4.2025
 
--4 tuntia eri ongelmien ratkaisimeksi ja uusi testi
+- 4 tuntia eri ongelmien ratkaisimeksi ja uusi testi
 
--8.4.2025
+- 8.4.2025
 
--1 tunti viikon viimeistelyyn
+- 1 tunti viikon viimeistelyyn
 
-summa nyt : 15 tuntia
+summa nyt : 17 tuntia
 
-#viikko5
+# viikko5
 
--10.4.2025
+- 10.4.2025
 
--3 tuntia UI:n tekoon
+- 3 tuntia UI:n tekoon
 
--11.4.2025
+- 11.4.2025
 
--3 tuntia toiminnallisuuden tekoon
+- 3 tuntia toiminnallisuuden tekoon
 
-summa nyt : 21 tuntia
+- 15.4.2025
+
+- 2 tuntia viikon tehtäviin pientä toiminnallisuutta 
+
+- summa nyt : 25 tuntia
