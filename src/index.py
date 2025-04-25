@@ -23,12 +23,15 @@ def main():
     mouse_held = False
 
     KeepGameRunning = True
+
+    GameOver = False
+
     while KeepGameRunning:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 KeepGameRunning = False
 
-        if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1 and not mouse_held:  # generoitu koodi alkaa
+        if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1 and not mouse_held and not GameOver:  # generoitu koodi alkaa
             x, y = event.pos ## koodia kuitenkin paljon muokattu
 
             levelgrid_x = x // 50
@@ -39,6 +42,11 @@ def main():
             if 0 <= levelgrid_x < width and 0 <= levelgrid_y < height: # empty tile
                 if level_map[levelgrid_y][levelgrid_x] == 99:
                     level_map[levelgrid_y][levelgrid_x] = 9
+
+            if 0 <= levelgrid_x < width and 0 <= levelgrid_y < height: # mine
+                if level_map[levelgrid_y][levelgrid_x] == 10:
+                    level_map[levelgrid_y][levelgrid_x] = 1000
+                    GameOver = True
 
 
             if 0 <= levelgrid_x < width and 0 <= levelgrid_y < height: # tile 1
@@ -77,7 +85,7 @@ def main():
             mouse_held = True
 
         
-        if event.type == pygame.MOUSEBUTTONDOWN and event.button == 3 and not mouse_held:
+        if event.type == pygame.MOUSEBUTTONDOWN and event.button == 3 and not mouse_held and not GameOver:
             x, y = event.pos
             levelgrid_x = x // 50
             levelgrid_y = (y - topbar) // 50

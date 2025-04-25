@@ -59,6 +59,11 @@ class Level:
         self.eight_texture = pygame.transform.scale(
             self.eight_texture, (self.tileSize, self.tileSize))
         
+        self.mine_texture = pygame.image.load("src/textures/mineexploded.png")
+
+        self.mine_texture = pygame.transform.scale(
+            self.mine_texture, (self.tileSize, self.tileSize))
+        
 
         self.tile_texture = pygame.transform.scale(
             self.tile_texture, (self.tileSize, self.tileSize))
@@ -104,6 +109,9 @@ class Level:
 
                 if self.level_map[row][col] == 8:
                     self.display.blit(self.eight_texture, (x, y))
+
+                if self.level_map[row][col] == 1000:
+                    self.display.blit(self.mine_texture, (x, y))
 
 
 
