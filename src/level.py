@@ -64,6 +64,11 @@ class Level:
         self.mine_texture = pygame.transform.scale(
             self.mine_texture, (self.tileSize, self.tileSize))
         
+        self.normalface_texture = pygame.image.load("src/textures/normalface.png")
+
+        self.normalface_texture = pygame.transform.scale(
+            self.normalface_texture, (self.tileSize, self.tileSize))
+        
 
         self.tile_texture = pygame.transform.scale(
             self.tile_texture, (self.tileSize, self.tileSize))
@@ -72,6 +77,14 @@ class Level:
         
         self.unseentiles = [10, 11, 22, 33, 44, 55, 66, 77, 88, 99]
         self.flagged = [100, 111, 222, 333, 444, 555, 665, 777, 888, 999]
+
+
+    def draw_face(self, displayX):
+        x = displayX
+        x = x / 2 - (self.tileSize / 2)
+        self.display.blit(self.normalface_texture, (x, 0))
+
+
 
     def draw_grid(self):  # Osittain generoitua koodia ChatGPT:llä
 

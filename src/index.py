@@ -155,6 +155,7 @@ def main():
         display.fill((180, 180, 180), rect=(0, 0, display_width, 60))
 
         level.draw_grid()
+        level.draw_face(display_width)
 
         pygame.display.update()
         clock.tick(60)
