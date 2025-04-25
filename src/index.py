@@ -90,6 +90,54 @@ def main():
                 elif current_value == 100:
                     level_map[levelgrid_y][levelgrid_x] = 10
 
+                
+                if current_value == 11:
+                    level_map[levelgrid_y][levelgrid_x] = 111
+                elif current_value == 111:
+                    level_map[levelgrid_y][levelgrid_x] = 11
+
+                
+                if current_value == 22:
+                    level_map[levelgrid_y][levelgrid_x] = 222
+                elif current_value == 222:
+                    level_map[levelgrid_y][levelgrid_x] = 22
+
+                if current_value == 33:
+                    level_map[levelgrid_y][levelgrid_x] = 333
+                elif current_value == 333:
+                    level_map[levelgrid_y][levelgrid_x] = 33
+
+                if current_value == 44:
+                    level_map[levelgrid_y][levelgrid_x] = 444
+                elif current_value == 444:
+                    level_map[levelgrid_y][levelgrid_x] = 44
+
+                if current_value == 55:
+                    level_map[levelgrid_y][levelgrid_x] = 555
+                elif current_value == 555:
+                    level_map[levelgrid_y][levelgrid_x] = 55
+
+                
+                if current_value == 66:
+                    level_map[levelgrid_y][levelgrid_x] = 665
+                elif current_value == 665:
+                    level_map[levelgrid_y][levelgrid_x] = 66
+
+                if current_value == 77:
+                    level_map[levelgrid_y][levelgrid_x] = 777
+                elif current_value == 777:
+                    level_map[levelgrid_y][levelgrid_x] = 77
+
+                if current_value == 88:
+                    level_map[levelgrid_y][levelgrid_x] = 888
+                elif current_value == 888:
+                    level_map[levelgrid_y][levelgrid_x] = 88
+
+                if current_value == 99:
+                    level_map[levelgrid_y][levelgrid_x] = 999
+                elif current_value == 999:
+                    level_map[levelgrid_y][levelgrid_x] = 99
+
             mouse_held = True
 
         if event.type == pygame.MOUSEBUTTONUP:
