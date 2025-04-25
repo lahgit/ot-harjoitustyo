@@ -39,3 +39,9 @@ summa nyt : 17 tuntia
 - 2 tuntia viikon tehtäviin pientä toiminnallisuutta 
 
 - summa nyt : 25 tuntia
+
+# viikko6
+
+- 25.4.2025
+
+- 2 tuntia toiminnallisuuden lisäämiseen
