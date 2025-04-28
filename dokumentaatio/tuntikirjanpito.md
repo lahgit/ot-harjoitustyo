@@ -45,3 +45,7 @@ summa nyt : 17 tuntia
 - 25.4.2025
 
 - 2 tuntia toiminnallisuuden lisäämiseen
+
+- 28.4.2025
+
+- 3 tuntia toiminnallisuutta varten
