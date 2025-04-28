@@ -26,6 +26,8 @@ def main():
 
     GameOver = False
 
+    FaceState = 1
+
     while KeepGameRunning:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -47,6 +49,7 @@ def main():
                 if level_map[levelgrid_y][levelgrid_x] == 10:
                     level_map[levelgrid_y][levelgrid_x] = 1000
                     GameOver = True
+                    FaceState = 2
 
 
             if 0 <= levelgrid_x < width and 0 <= levelgrid_y < height: # tile 1
@@ -83,6 +86,8 @@ def main():
                     level_map[levelgrid_y][levelgrid_x] = 8
 
             mouse_held = True
+            if not GameOver:
+                FaceState = 3
 
         
         if event.type == pygame.MOUSEBUTTONDOWN and event.button == 3 and not mouse_held and not GameOver:
@@ -148,14 +153,15 @@ def main():
 
             mouse_held = True
 
-        if event.type == pygame.MOUSEBUTTONUP:
+        if event.type == pygame.MOUSEBUTTONUP and not GameOver:
             mouse_held = False  # generoitu koodi päättyy
+            FaceState = 1
 
         display.fill((120, 120, 120))
         display.fill((180, 180, 180), rect=(0, 0, display_width, 60))
 
         level.draw_grid()
-        level.draw_face(display_width)
+        level.draw_face(display_width, FaceState)
 
         pygame.display.update()
         clock.tick(60)

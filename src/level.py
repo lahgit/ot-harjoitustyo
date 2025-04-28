@@ -69,6 +69,16 @@ class Level:
         self.normalface_texture = pygame.transform.scale(
             self.normalface_texture, (self.tileSize, self.tileSize))
         
+        self.deadface_texture = pygame.image.load("src/textures/deadface.png")
+
+        self.deadface_texture = pygame.transform.scale(
+            self.deadface_texture, (self.tileSize, self.tileSize))
+        
+        self.shockedface_texture = pygame.image.load("src/textures/shockedface.png")
+
+        self.shockedface_texture = pygame.transform.scale(
+            self.shockedface_texture, (self.tileSize, self.tileSize))
+        
 
         self.tile_texture = pygame.transform.scale(
             self.tile_texture, (self.tileSize, self.tileSize))
@@ -79,10 +89,18 @@ class Level:
         self.flagged = [100, 111, 222, 333, 444, 555, 665, 777, 888, 999]
 
 
-    def draw_face(self, displayX):
+    def draw_face(self, displayX, face):
         x = displayX
         x = x / 2 - (self.tileSize / 2)
-        self.display.blit(self.normalface_texture, (x, 0))
+
+        if face == 1:
+            self.display.blit(self.normalface_texture, (x, 0)) # Draws normal face when the value is 1
+
+        if face == 2:
+            self.display.blit(self.deadface_texture, (x, 0))
+
+        if face == 3:
+            self.display.blit(self.shockedface_texture, (x, 0))
 
 
 
