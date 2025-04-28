@@ -3,6 +3,8 @@
 # 11, 22, 33... means unseen numbered tiles
 # 99 means empty unseen tiles.
 
+# need to also tell manually how many mines to flag and how many tiles to clear for now
+
 Level1 = [[10, 22, 99, 99, 99, 99, 99, 99],
           [10, 33, 99, 11, 11, 11, 99, 99],
           [10, 22, 99, 11, 10, 22, 11, 11],
@@ -12,16 +14,27 @@ Level1 = [[10, 22, 99, 99, 99, 99, 99, 99],
           [11, 22, 11, 33, 22, 33, 10, 11],
           [10, 22, 10, 22, 10, 22, 11, 11]]
 
+level1mines = 11
+level1tiles = 53
+
+
 
 Level2 = [[10, 22, 10, 11, 11, 22, 10],
           [22, 33, 11, 11, 11, 10, 22],
           [10, 22, 11, 11, 22, 11, 11],
           [10, 22, 11, 10, 11, 99, 99]]
 
+level2mines = 7
+level2tiles = 21
+
 Level3 = [[10, 10, 10, 22, 99, 11, 10, 10, 22, 10, 22, 10],
           [10, 66, 10, 22, 99, 22, 33, 33, 22, 11, 22, 11],
           [10, 44, 22, 22, 99, 11, 10, 11, 99, 99, 99, 99],
           [11, 22, 10, 11, 99, 11, 11, 11, 99, 99, 99, 99]]
+
+
+level3mines = 12
+level3tiles = 36
 
 
 selected_level_value_global = 0
@@ -109,7 +122,7 @@ ui.start()
 
 window.mainloop()
 
-print(selected_level_value_global)
+#print(selected_level_value_global)
 
 
 
@@ -120,28 +133,27 @@ class SelectorForLevels:
 
     def __init__(self):
 
-        self.selected_level = self.select()
-        
+        self.levelinfo = self.select()
+        self.selected_level = self.levelinfo[0]
+        self.level_mines = self.levelinfo[1]
+        self.level_tiles = self.levelinfo[2]
 
     def select(self):
-        #print("Available levels: \n")
-        #for stage in Levellist:
-        #    print(stage)
-        #    print("\n")
+        
         while True:
 
             #value = selected_level_value_global #str(input("Select the level: "))
             if str(selected_level_value_global) == "1":
 
-                return Level1
+                return (Level1,level1mines,level1tiles)
 
             if str(selected_level_value_global) == "2":
 
-                return Level2
+                return (Level2,level2mines,level2tiles)
 
             if str(selected_level_value_global) == "3":
 
-                return Level3
+                return (Level3,level3mines,level3tiles)
 
     def get_selected_level(self):
         return self.selected_level

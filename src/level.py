@@ -79,6 +79,13 @@ class Level:
         self.shockedface_texture = pygame.transform.scale(
             self.shockedface_texture, (self.tileSize, self.tileSize))
         
+        self.victoryface_texture = pygame.image.load("src/textures/victoryface.png")
+
+        self.victoryface_texture = pygame.transform.scale(
+            self.victoryface_texture, (self.tileSize, self.tileSize))
+        
+        
+        
 
         self.tile_texture = pygame.transform.scale(
             self.tile_texture, (self.tileSize, self.tileSize))
@@ -101,6 +108,9 @@ class Level:
 
         if face == 3:
             self.display.blit(self.shockedface_texture, (x, 0))
+        
+        if face == 4:
+            self.display.blit(self.victoryface_texture, (x, 0))
 
 
 
