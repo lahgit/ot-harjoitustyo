@@ -49,3 +49,9 @@ summa nyt : 17 tuntia
 - 28.4.2025
 
 - 3 tuntia toiminnallisuutta varten
+
+- 29.4.2025
+
+- 3 tuntia toiminnallisuutta ja testit toimii vihdoin.
+
+- summa nyt : 33 tuntia

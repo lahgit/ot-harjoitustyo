@@ -22,3 +22,5 @@
 ## viikko 6
 
 - Toimiva versio jossa voi hävitä tai voittaa.
+
+- Testit toimivat vihdoin taas
