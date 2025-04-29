@@ -3,6 +3,7 @@ import pygame
 from level import Level
 from levelselect import UI
 from unittest.mock import patch
+import time
 
 
 
@@ -44,8 +45,7 @@ class TestLevel(unittest.TestCase):
 
     def test_creating_squares(self):
 
-        global selected_level_value_global
-        selected_level_value_global = "1"
+        #testing if drawing tiles function works
 
         pygame.init()
         testdisplay = pygame.display.set_mode((500, 445))
@@ -55,10 +55,20 @@ class TestLevel(unittest.TestCase):
 
         self.assertEqual(testlevel.GenerationSuccess, True)
 
-    #def test_selecting_level(self):
-    #    with patch('builtins.input', return_value='2'):
-    #        Testingclass = SelectorForLevels()
-    #        answer = Testingclass.select()
-    #    
-    #
-    #        self.assertEqual(answer, Level2)
+    def test_drawing_face(self):
+        testdisplay = pygame.display.set_mode((500, 445))
+
+
+        testlevel = Level(testdisplay, Level1)
+
+        # drawing all 4 faces and trying to see if a crash happens
+
+        testlevel.draw_face(500, 1)
+
+        testlevel.draw_face(500, 2)
+
+        testlevel.draw_face(500, 3)
+
+        testlevel.draw_face(500, 4)
+    
+        self.assertEqual(True, True)
