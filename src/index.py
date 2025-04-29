@@ -1,9 +1,11 @@
 import pygame
 from level import Level
 from levelselect import SelectorForLevels
+from levelselect import ui_start
 
 
 def main():
+    ui_start()
     getlevel = SelectorForLevels()
     level_map = getlevel.selected_level
 

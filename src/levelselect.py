@@ -42,6 +42,16 @@ selected_level_value_global = 0
 
 from tkinter import Tk, ttk, StringVar
 
+def ui_start():
+    window = Tk()
+    window.title("Level select")
+
+    ui = UI(window)
+    ui.start()
+
+    window.mainloop()
+
+
 class UI:
     def __init__(self, root):
         self._root = root
@@ -50,23 +60,27 @@ class UI:
         self._label_var.set("0")
         root.geometry("400x200")
 
+        self.button1 = None
+        self.button2 = None
+        self.button3 = None
+
     def start(self):
         self._entry = ttk.Entry(master=self._root)
 
 
-        button1 = ttk.Button(
+        self.button1 = ttk.Button(
           master=self._root,
           text="Level 1",
           command=self._choose1
         )
 
-        button2 = ttk.Button(
+        self.button2 = ttk.Button(
           master=self._root,
           text="Level 2",
           command=self._choose2
         )
 
-        button3 = ttk.Button(
+        self.button3 = ttk.Button(
           master=self._root,
           text="Level 3",
           command=self._choose3
@@ -76,9 +90,9 @@ class UI:
 
         heading_label.grid(row=0, column=0, columnspan=2, padx=10, pady=10, sticky="ew")
 
-        button1.grid(row=1, column=0, padx=10, pady=10, sticky="ew")
-        button2.grid(row=2, column=0, padx=10, pady=10, sticky="ew")
-        button3.grid(row=3, column=0, padx=10, pady=10, sticky="ew")
+        self.button1.grid(row=1, column=0, padx=10, pady=10, sticky="ew")
+        self.button2.grid(row=2, column=0, padx=10, pady=10, sticky="ew")
+        self.button3.grid(row=3, column=0, padx=10, pady=10, sticky="ew")
 
     def _choose3(self):
         global selected_level_value_global
@@ -112,16 +126,7 @@ class UI:
         print(self._label_var.get())
         self._root.destroy()
 
-
-
-window = Tk()
-window.title("Level select")
-
-ui = UI(window)
-ui.start()
-
-window.mainloop()
-
+#moved the ui start to a function
 #print(selected_level_value_global)
 
 
@@ -157,3 +162,6 @@ class SelectorForLevels:
 
     def get_selected_level(self):
         return self.selected_level
+
+
+    
