@@ -9,10 +9,9 @@ def main():
     getlevel = SelectorForLevels()
     level_map = getlevel.selected_level
 
-    #info from the level
+    # info from the level
     mineAmount = getlevel.level_mines
     tilesToClear = getlevel.level_tiles
-
 
     height = len(level_map)
     width = len(level_map[0])
@@ -36,75 +35,69 @@ def main():
 
     FaceState = 1
 
-    #amount that player has done
+    # amount that player has done
     MinesFlagged = 0
     ClearedTiles = 0
     flagsplaced = 0
-
 
     while KeepGameRunning:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 KeepGameRunning = False
-        
+
         if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1 and not mouse_held and not GameOver:  # generoitu koodi alkaa
-            x, y = event.pos ## koodia kuitenkin paljon muokattu
+            x, y = event.pos  # koodia kuitenkin paljon muokattu
 
             levelgrid_x = x // 50
             levelgrid_y = (y-topbar) // 50
 
-
-
-            if 0 <= levelgrid_x < width and 0 <= levelgrid_y < height: # empty tile
+            if 0 <= levelgrid_x < width and 0 <= levelgrid_y < height:  # empty tile
                 if level_map[levelgrid_y][levelgrid_x] == 99:
                     level_map[levelgrid_y][levelgrid_x] = 9
                     ClearedTiles += 1
 
-            if 0 <= levelgrid_x < width and 0 <= levelgrid_y < height: # mine
+            if 0 <= levelgrid_x < width and 0 <= levelgrid_y < height:  # mine
                 if level_map[levelgrid_y][levelgrid_x] == 10:
                     level_map[levelgrid_y][levelgrid_x] = 1000
                     GameOver = True
                     FaceState = 2
 
-
-            if 0 <= levelgrid_x < width and 0 <= levelgrid_y < height: # tile 1
+            if 0 <= levelgrid_x < width and 0 <= levelgrid_y < height:  # tile 1
                 if level_map[levelgrid_y][levelgrid_x] == 11:
                     level_map[levelgrid_y][levelgrid_x] = 1
                     ClearedTiles += 1
-                   
 
-            if 0 <= levelgrid_x < width and 0 <= levelgrid_y < height: # tile 2
+            if 0 <= levelgrid_x < width and 0 <= levelgrid_y < height:  # tile 2
                 if level_map[levelgrid_y][levelgrid_x] == 22:
                     level_map[levelgrid_y][levelgrid_x] = 2
                     ClearedTiles += 1
 
-            if 0 <= levelgrid_x < width and 0 <= levelgrid_y < height: # tile 3
+            if 0 <= levelgrid_x < width and 0 <= levelgrid_y < height:  # tile 3
                 if level_map[levelgrid_y][levelgrid_x] == 33:
                     level_map[levelgrid_y][levelgrid_x] = 3
                     ClearedTiles += 1
 
-            
-            if 0 <= levelgrid_x < width and 0 <= levelgrid_y < height: # tile 4
+            if 0 <= levelgrid_x < width and 0 <= levelgrid_y < height:  # tile 4
                 if level_map[levelgrid_y][levelgrid_x] == 44:
                     level_map[levelgrid_y][levelgrid_x] = 4
                     ClearedTiles += 1
 
-            if 0 <= levelgrid_x < width and 0 <= levelgrid_y < height: # tile 5
+            if 0 <= levelgrid_x < width and 0 <= levelgrid_y < height:  # tile 5
                 if level_map[levelgrid_y][levelgrid_x] == 55:
                     level_map[levelgrid_y][levelgrid_x] = 5
                     ClearedTiles += 1
 
-            if 0 <= levelgrid_x < width and 0 <= levelgrid_y < height: # tile 6
+            if 0 <= levelgrid_x < width and 0 <= levelgrid_y < height:  # tile 6
                 if level_map[levelgrid_y][levelgrid_x] == 66:
                     level_map[levelgrid_y][levelgrid_x] = 6
                     ClearedTiles += 1
 
-            if 0 <= levelgrid_x < width and 0 <= levelgrid_y < height: # tile 7
+            if 0 <= levelgrid_x < width and 0 <= levelgrid_y < height:  # tile 7
                 if level_map[levelgrid_y][levelgrid_x] == 77:
                     level_map[levelgrid_y][levelgrid_x] = 7
                     ClearedTiles += 1
 
-            if 0 <= levelgrid_x < width and 0 <= levelgrid_y < height: # tile 8
+            if 0 <= levelgrid_x < width and 0 <= levelgrid_y < height:  # tile 8
                 if level_map[levelgrid_y][levelgrid_x] == 88:
                     level_map[levelgrid_y][levelgrid_x] = 8
                     ClearedTiles += 1
@@ -113,15 +106,14 @@ def main():
             if not GameOver:
                 FaceState = 3
 
-        
-        if event.type == pygame.MOUSEBUTTONDOWN and event.button == 3 and not mouse_held and not GameOver: # Flagging
+        if event.type == pygame.MOUSEBUTTONDOWN and event.button == 3 and not mouse_held and not GameOver:  # Flagging
             x, y = event.pos
             levelgrid_x = x // 50
             levelgrid_y = (y - topbar) // 50
 
             if 0 <= levelgrid_x < width and 0 <= levelgrid_y < height:
                 current_value = level_map[levelgrid_y][levelgrid_x]
-                
+
                 if current_value == 10:
                     level_map[levelgrid_y][levelgrid_x] = 100
                     MinesFlagged += 1
@@ -131,7 +123,6 @@ def main():
                     MinesFlagged -= 1
                     flagsplaced -= 1
 
-                
                 if current_value == 11:
                     level_map[levelgrid_y][levelgrid_x] = 111
                     flagsplaced += 1
@@ -139,7 +130,6 @@ def main():
                     level_map[levelgrid_y][levelgrid_x] = 11
                     flagsplaced -= 1
 
-                
                 if current_value == 22:
                     level_map[levelgrid_y][levelgrid_x] = 222
                     flagsplaced += 1
@@ -168,7 +158,6 @@ def main():
                     level_map[levelgrid_y][levelgrid_x] = 55
                     flagsplaced -= 1
 
-                
                 if current_value == 66:
                     level_map[levelgrid_y][levelgrid_x] = 665
                     flagsplaced += 1
@@ -209,8 +198,6 @@ def main():
             FaceState = 4
             GameOver = True
 
-        
-        
         display.fill((120, 120, 120))
         display.fill((180, 180, 180), rect=(0, 0, display_width, 60))
 

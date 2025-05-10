@@ -5,6 +5,7 @@
 
 # need to also tell manually how many mines to flag and how many tiles to clear for now
 
+from tkinter import Tk, ttk, StringVar
 Level1 = [[10, 22, 99, 99, 99, 99, 99, 99],
           [10, 33, 99, 11, 11, 11, 99, 99],
           [10, 22, 99, 11, 10, 22, 11, 11],
@@ -16,7 +17,6 @@ Level1 = [[10, 22, 99, 99, 99, 99, 99, 99],
 
 level1mines = 11
 level1tiles = 53
-
 
 
 Level2 = [[10, 22, 10, 11, 11, 22, 10],
@@ -39,8 +39,6 @@ level3tiles = 36
 
 selected_level_value_global = 0
 
-
-from tkinter import Tk, ttk, StringVar
 
 def ui_start():
     window = Tk()
@@ -67,28 +65,29 @@ class UI:
     def start(self):
         self._entry = ttk.Entry(master=self._root)
 
-
         self.button1 = ttk.Button(
-          master=self._root,
-          text="Level 1",
-          command=self._choose1
+            master=self._root,
+            text="Level 1",
+            command=self._choose1
         )
 
         self.button2 = ttk.Button(
-          master=self._root,
-          text="Level 2",
-          command=self._choose2
+            master=self._root,
+            text="Level 2",
+            command=self._choose2
         )
 
         self.button3 = ttk.Button(
-          master=self._root,
-          text="Level 3",
-          command=self._choose3
+            master=self._root,
+            text="Level 3",
+            command=self._choose3
         )
 
-        heading_label = ttk.Label(master=self._root, text="Select a level by pressing one of the buttons")
+        heading_label = ttk.Label(
+            master=self._root, text="Select a level by pressing one of the buttons")
 
-        heading_label.grid(row=0, column=0, columnspan=2, padx=10, pady=10, sticky="ew")
+        heading_label.grid(row=0, column=0, columnspan=2,
+                           padx=10, pady=10, sticky="ew")
 
         self.button1.grid(row=1, column=0, padx=10, pady=10, sticky="ew")
         self.button2.grid(row=2, column=0, padx=10, pady=10, sticky="ew")
@@ -104,7 +103,6 @@ class UI:
         print(self._label_var.get())
         self._root.destroy()
 
-    
     def _choose2(self):
         global selected_level_value_global
         value = self._label_var.get()
@@ -114,7 +112,6 @@ class UI:
         self._label_var.set(increased_value)
         print(self._label_var.get())
         self._root.destroy()
- 
 
     def _choose1(self):
         global selected_level_value_global
@@ -126,9 +123,8 @@ class UI:
         print(self._label_var.get())
         self._root.destroy()
 
-#moved the ui start to a function
-#print(selected_level_value_global)
-
+# moved the ui start to a function
+# print(selected_level_value_global)
 
 
 Levellist = {"Level 1": Level1, "Level 2": Level2, "Level 3": Level3}
@@ -144,24 +140,21 @@ class SelectorForLevels:
         self.level_tiles = self.levelinfo[2]
 
     def select(self):
-        
+
         while True:
 
-            #value = selected_level_value_global #str(input("Select the level: "))
+            # value = selected_level_value_global #str(input("Select the level: "))
             if str(selected_level_value_global) == "1":
 
-                return (Level1,level1mines,level1tiles)
+                return (Level1, level1mines, level1tiles)
 
             if str(selected_level_value_global) == "2":
 
-                return (Level2,level2mines,level2tiles)
+                return (Level2, level2mines, level2tiles)
 
             if str(selected_level_value_global) == "3":
 
-                return (Level3,level3mines,level3tiles)
+                return (Level3, level3mines, level3tiles)
 
     def get_selected_level(self):
         return self.selected_level
-
-
-    

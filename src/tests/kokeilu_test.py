@@ -6,8 +6,6 @@ from unittest.mock import patch
 import time
 
 
-
-
 Level1 = [[10, 22, 99, 99, 99, 99, 99, 99],
           [10, 33, 99, 11, 11, 11, 99, 99],
           [10, 22, 99, 11, 10, 22, 11, 11],
@@ -19,7 +17,6 @@ Level1 = [[10, 22, 99, 99, 99, 99, 99, 99],
 
 level1mines = 11
 level1tiles = 53
-
 
 
 Level2 = [[10, 22, 10, 11, 11, 22, 10],
@@ -41,11 +38,12 @@ level3tiles = 36
 
 Levellist = {"Level 1": Level1, "Level 2": Level2, "Level 3": Level3}
 
+
 class TestLevel(unittest.TestCase):
 
     def test_creating_squares(self):
 
-        #testing if drawing tiles function works
+        # testing if drawing tiles function works
 
         pygame.init()
         testdisplay = pygame.display.set_mode((500, 445))
@@ -58,7 +56,6 @@ class TestLevel(unittest.TestCase):
     def test_drawing_face(self):
         testdisplay = pygame.display.set_mode((500, 445))
 
-
         testlevel = Level(testdisplay, Level1)
 
         # drawing all 4 faces and trying to see if a crash happens
@@ -70,5 +67,5 @@ class TestLevel(unittest.TestCase):
         testlevel.draw_face(500, 3)
 
         testlevel.draw_face(500, 4)
-    
+
         self.assertEqual(True, True)
