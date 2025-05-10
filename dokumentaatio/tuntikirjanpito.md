@@ -61,3 +61,5 @@ summa nyt : 17 tuntia
 - 10.5.2025
 
 - 2 tuntia toiminnallisuuden lisäystä
+
+- 2 tuntia dokumentaatiota ja kommentointia
