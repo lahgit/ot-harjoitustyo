@@ -19,6 +19,9 @@ arkkitehtuuri
 https://github.com/lahgit/ot-harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.md
 
 
+vaatimusmäärittely
+https://github.com/lahgit/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md
+
 ## Asennus
 
 * git clone git@github.com:lahgit/ot-harjoitustyo.git
