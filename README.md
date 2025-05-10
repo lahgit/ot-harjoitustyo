@@ -1,11 +1,8 @@
 # Ohjelmistotekniikka, harjoitustyö
 
 ## Miinaharava
-* Ideana toimia samalla tavalla kuin perinteinen minesweeper
-* Suoritetut pelit ja niiden tuloksia voidaan säilyttää tietokannassa/tiedostossa
-* Pelillä voi ehkä olla ajastin
-* Pelillä on kolme tasoa, mutta ohjelman koodi pystyy toimimaan eri kokoisilla tasoilla halutessaan.
 
+Ideana toimia samalla tavalla kuin perinteinen Minesweeper. Ohjelmassa on kolme tasoa jota voi pelata ja niissä voi hävitä tai voittaa.
 
 
 kirjanpito
