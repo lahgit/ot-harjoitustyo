@@ -95,6 +95,15 @@ class Level:
         self.unseentiles = [10, 11, 22, 33, 44, 55, 66, 77, 88, 99]
         self.flagged = [100, 111, 222, 333, 444, 555, 665, 777, 888, 999]
 
+        #Setting up text
+
+        self.font = pygame.font.Font('freesansbold.ttf', 20)
+
+        self.text = self.font.render('flags :', True, (255, 0, 0))
+
+        self.textRect = self.text.get_rect()
+        
+
 
     def draw_face(self, displayX, face):
         x = displayX
@@ -111,6 +120,18 @@ class Level:
         
         if face == 4:
             self.display.blit(self.victoryface_texture, (x, 0))
+
+    
+    def draw_flagcount(self, displayX, mineamount, flagsplaced):
+        x = displayX
+        x = x / 4 - (self.tileSize / 2)
+
+        self.textRect.center = (x, 28)
+
+        self.text = self.font.render(f'flags : {mineamount-flagsplaced}', True, (255, 0, 0))
+
+        self.display.blit(self.text, self.textRect)
+
 
 
 
