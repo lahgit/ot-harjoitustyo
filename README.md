@@ -24,8 +24,16 @@ https://github.com/lahgit/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaar
 
 ## Asennus
 
-* git clone git@github.com:lahgit/ot-harjoitustyo.git
-* poetry install
-* poetry run invoke build
-* poetry run invoke start
+```bash
+git clone git@github.com:lahgit/ot-harjoitustyo.git
+```
+```bash
+poetry install
+```
 
+```bash
+poetry run invoke build
+```
+```bash
+poetry run invoke start
+```
