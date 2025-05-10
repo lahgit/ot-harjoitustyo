@@ -3,10 +3,10 @@
 ## Sovelluksen tarkoitus
 kyseessä on peli jossa pelaajan täytyy etsiä ruudukolta miinoja. Ideana olisisi toimia perinteisen Minesweeperin mukaan.
 
-##Käyttäjät
+## Käyttäjät
 Ei ole käyttäjiä. On vain kolme valittavaa tasoa jota pelata.
 
-##Version tarjoama toiminnallisuus
+## Version tarjoama toiminnallisuus
 
 - Tällä hetkellä Peli toimii lähes kuin tavallinen minesweeper. Ajastinta ei ole, mutta tilanteeseen reagoiva hymiö ja lippujen määrä näkyy ylhäällä.
 
@@ -18,7 +18,7 @@ Ei ole käyttäjiä. On vain kolme valittavaa tasoa jota pelata.
 
 - yksinkertainen käyttöliittymä tasojen valintaan on tehty, josta voi valita kolme tasoa. 
 
-# Jatkokehitysideoita
+## Jatkokehitysideoita
 
 - Ohjelma on luotu tukemaan eri kokoisia kenttiä vaikka nyt on vain kolme kenttää. Olisi siis helppoa laajentaa useampaan mikäli käyttöliittymää säätää.
 
