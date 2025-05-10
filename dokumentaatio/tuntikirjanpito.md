@@ -55,3 +55,9 @@ summa nyt : 17 tuntia
 - 3 tuntia toiminnallisuutta ja testit toimii vihdoin.
 
 - summa nyt : 33 tuntia
+
+# viikko 7
+
+- 10.5.2025
+
+- 2 tuntia toiminnallisuuden lisäystä
