@@ -132,7 +132,19 @@ Levellist = {"Level 1": Level1, "Level 2": Level2, "Level 3": Level3}
 
 class SelectorForLevels:
 
+    """Luokka, joka valitsee tason viemällä käyttäjän käyttöliittymälle.
+
+
+        """
+
     def __init__(self):
+
+        """Luokan konstruktori, joka käynnistaa tason.
+
+        Args:
+            levelinfo: aloittaa kayttoliittyman
+            selected_level, level_mines, level_tiles: tarvittuja tietoja valitusta tasosta.
+        """
 
         self.levelinfo = self.select()
         self.selected_level = self.levelinfo[0]

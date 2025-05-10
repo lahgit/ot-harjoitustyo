@@ -2,7 +2,26 @@ import pygame
 
 
 class Level:
+
+    """Luokka, jonka avulla ylläpidetään tason piirtämistä.
+
+        Attributes:
+            display: annettu naytto.
+            level_map: annettu kentta.
+        """
+    
     def __init__(self, display, level_map):
+
+        """Luokan konstruktori, joka luo hallinnoitavan kentän.
+
+        Args:
+            display: naytto jota kaytetaan.
+            level_map: matriisi josta taso luodaan.
+            tileSize: ruudun koko
+            GenerationSuccess: testausta varten
+            x_texture: tarvittava kuva tiedosto tason piirtamisessa.
+            font,text,textRect: tekstin luontia varten
+        """
 
         self.display = display
         self.level_map = level_map
@@ -101,6 +120,14 @@ class Level:
         self.textRect = self.text.get_rect()
 
     def draw_face(self, displayX, face):
+
+        """Piirtaa ylhaalla olevan naaman
+
+        Args:
+            displayX: Naytonleveys.
+            face: numero joka kertoo naaman tilanteen
+        """
+
         x = displayX
         x = x / 2 - (self.tileSize / 2)
 
@@ -118,6 +145,16 @@ class Level:
             self.display.blit(self.victoryface_texture, (x, 0))
 
     def draw_flagcount(self, displayX, mineamount, flagsplaced):
+
+        """Piirtaa paljon lippuja tarvitsee
+
+        Args:
+            displayX: Naytonleveys.
+            mineamount: miinojen maara (tarvittavat liput)
+            flagsplaced: laitettujen lippujen maara
+        """
+
+
         x = displayX
         x = x / 4 - (self.tileSize / 2)
 
@@ -129,6 +166,9 @@ class Level:
         self.display.blit(self.text, self.textRect)
 
     def draw_grid(self):  # Osittain generoitua koodia ChatGPT:llä
+
+        """Piirtaa ruudukon tilanteen matriisin mukaan
+        """
 
         for row in range(len(self.level_map)):
 
