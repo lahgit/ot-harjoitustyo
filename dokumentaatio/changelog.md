@@ -15,8 +15,8 @@
 
 ## viikko 5
 
--UI
--voi klikata ruutuja ja niistä voi saada numeroita tai tyhjiä ruutuja
+- UI
+- voi klikata ruutuja ja niistä voi saada numeroita tai tyhjiä ruutuja
 
 
 ## viikko 6
@@ -24,3 +24,8 @@
 - Toimiva versio jossa voi hävitä tai voittaa.
 
 - Testit toimivat vihdoin taas
+
+
+## viikko 7
+
+- ylhäällä näkyy lippujen määrä.
