@@ -32,7 +32,7 @@ poetry install
 ```
 
 ```bash
-poetry run invoke build
+poetry shell
 ```
 ```bash
 poetry run invoke start
