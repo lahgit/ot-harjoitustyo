@@ -41,6 +41,12 @@ selected_level_value_global = 0
 
 
 def ui_start():
+
+    """Käynnistää käyttöliittymän.
+
+        Funktio luo käyttöliittymä olion ja aloittaa sen silmukan.
+        """
+    
     window = Tk()
     window.title("Level select")
 
@@ -153,6 +159,9 @@ class SelectorForLevels:
 
     def select(self):
 
+        """Ottaa valitun tason.
+        """
+
         while True:
 
             # value = selected_level_value_global #str(input("Select the level: "))
@@ -169,4 +178,11 @@ class SelectorForLevels:
                 return (Level3, level3mines, level3tiles)
 
     def get_selected_level(self):
+
+        """Funktio pelkästään palauttaa tason
+
+        Returns:
+            Matriisin tasosta
+        """
+
         return self.selected_level
