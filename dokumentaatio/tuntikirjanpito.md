@@ -22,8 +22,6 @@
 
 - 1 tunti viikon viimeistelyyn
 
-summa nyt : 17 tuntia
-
 # viikko5
 
 - 10.4.2025
@@ -37,8 +35,6 @@ summa nyt : 17 tuntia
 - 15.4.2025
 
 - 2 tuntia viikon tehtäviin pientä toiminnallisuutta 
-
-- summa nyt : 25 tuntia
 
 # viikko6
 
@@ -54,8 +50,6 @@ summa nyt : 17 tuntia
 
 - 3 tuntia toiminnallisuutta ja testit toimii vihdoin.
 
-- summa nyt : 33 tuntia
-
 # viikko 7
 
 - 10.5.2025
@@ -63,3 +57,9 @@ summa nyt : 17 tuntia
 - 2 tuntia toiminnallisuuden lisäystä
 
 - 2 tuntia dokumentaatiota ja kommentointia
+
+- 11.5.2025 
+
+- Viimeistelyä 4 tuntia
+
+- Summa 41 tuntia
