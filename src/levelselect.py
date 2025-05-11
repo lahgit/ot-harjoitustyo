@@ -57,6 +57,12 @@ def ui_start():
 
 
 class UI:
+
+    """Käyttöliittymä olio.
+
+
+        """
+
     def __init__(self, root):
         self._root = root
         self._entry = None

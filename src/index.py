@@ -5,6 +5,10 @@ from levelselect import ui_start
 
 
 def main():
+    """Pääohjelma.
+
+
+        """
     ui_start()
     getlevel = SelectorForLevels()
     level_map = getlevel.selected_level
