@@ -11,4 +11,9 @@ Ohjelman suoritus tapahtuu kolmella python tiedostolla. index.py käynnistää j
     Level ".draw_grid" --  index.py
 ```
 
-
+```mermaid
+sequenceDiagram
+    UI->>SelectorForLevels: selected_level_value_global = x
+    SelectorForLevels-->>Level: "level matrix"
+    Level-)pygame: level.draw_grid()
+```
