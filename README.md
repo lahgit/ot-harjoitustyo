@@ -22,6 +22,15 @@ https://github.com/lahgit/ot-harjoitustyo/blob/master/dokumentaatio/arkkitehtuur
 vaatimusmäärittely
 https://github.com/lahgit/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md
 
+
+testaus
+https://github.com/lahgit/ot-harjoitustyo/blob/master/dokumentaatio/testaus.md
+
+
+
+käyttöohje
+https://github.com/lahgit/ot-harjoitustyo/blob/master/dokumentaatio/kayttoohje.md
+
 ## Asennus
 
 ```bash
