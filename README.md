@@ -31,6 +31,12 @@ https://github.com/lahgit/ot-harjoitustyo/blob/master/dokumentaatio/testaus.md
 käyttöohje
 https://github.com/lahgit/ot-harjoitustyo/blob/master/dokumentaatio/kayttoohje.md
 
+
+
+tekoälyn käyttö
+https://github.com/lahgit/ot-harjoitustyo/blob/master/dokumentaatio/tekoaly.md
+
+
 ## Asennus
 
 ```bash
